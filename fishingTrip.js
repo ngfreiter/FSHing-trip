@@ -21,11 +21,13 @@ const sushiOutDir = path.join(outDir, "sushi");
 const differentialOutDir = path.join(outDir, "diff");
 
 // goFSH
+console.log('\nRunning goFSH\n');
 try {
   execSync(`ihsus ${inDir} -o ${goFSHOutDir}`, { stdio: "inherit" });
 } catch {}
 
 // sushi
+console.log('\nRunning sushi\n')
 if (!fs.existsSync(path.join(inDir, "config.yaml"))) {
   console.log(
     `A config.yaml is required for SUSHI to run. Add a config.yaml to ${inDir}`
@@ -40,6 +42,7 @@ try {
   execSync(`sushi ${outDir} -o ${sushiOutDir}`, { stdio: "inherit" });
 } catch {}
 
+console.log('\nGenerating differentials')
 // Get the original and round-trip versions of the files
 const originalFiles = getFilesRecursive(inDir).filter((file) =>
   file.endsWith(".json")
