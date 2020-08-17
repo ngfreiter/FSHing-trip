@@ -1,0 +1,16 @@
+{
+  "name": "fishing-trip",
+  "version": "0.0.1",
+  "description": "A simple wrapper to run round-trip FHIR artifacts using goFSH and SUSHI and then examine the difference between the output and the original input.",
+  "main": "fishingTrip.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "diff": "^4.0.2",
+    "fs-extra": "^9.0.1"
+  }
+}
