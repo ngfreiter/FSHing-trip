@@ -7,7 +7,7 @@ import { execSync } from "child_process";
 
 if (process.argv.length < 3) {
   console.log("Please specify the path to the input directory");
-  console.log("Example usage: node fishingTrip.js ./FHIRDefinitions");
+  console.log("Example usage: node FSHingTrip.js ./FHIRDefinitions");
   process.exit(1);
 }
 
