@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import path from "path";
-import fs from "fs-extra";
-import diff from "diff";
-import { execSync } from "child_process";
+const path = require("path")
+const fs = require("fs-extra")
+const diff = require("diff")
+const execSync = require("child_process").execSync;
 
 if (process.argv.length < 3) {
   console.log("Please specify the path to the input directory");
