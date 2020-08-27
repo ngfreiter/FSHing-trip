@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const path = require("path")
-const fs = require("fs-extra")
-const diff = require("diff")
+const path = require("path");
+const fs = require("fs-extra");
+const diff = require("diff");
 const execSync = require("child_process").execSync;
 
 if (process.argv.length < 3) {
